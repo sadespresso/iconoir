@@ -7,13 +7,21 @@ funding:
   - https://opencollective.com/iconoir
 
 environment:
-  sdk: '>=2.17.1 <3.0.0'
-  flutter: '>=1.17.0'
+  sdk: ">=2.17.1 <3.0.0"
+  flutter: ">=1.17.0"
+
+flutter:
+  fonts:
+    - family: Iconoir Regular
+      fonts:
+        - asset: "fonts/iconoir_regular.ttf"
+    - family: Iconoir Solid
+      fonts:
+        - asset: "fonts/iconoir_solid.ttf"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^2.0.4
 
 dev_dependencies:
   flutter_test:

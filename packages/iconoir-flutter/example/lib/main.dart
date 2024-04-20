@@ -33,9 +33,7 @@ class _InteractiveIconState extends State<_InteractiveIcon> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: _changeColor,
-      child: Iconoir(
-        color: color,
-      ),
+      child: Icon(Iconoir.iconoir, color: color),
     );
   }
 
