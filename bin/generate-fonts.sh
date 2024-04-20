@@ -1,6 +1,11 @@
-mkdir ../fonts
-rm ../fonts/*
+[ ! -d ../fonts ] && rm -r ../fonts && mkdir -p ../fonts
 
-fantasticon ../icons/regular -o ../fonts -t ttf woff woff2 eot svg -g json -n "Iconoir Regular"
+cp -R ../icons/ .
 
-fantasticon ../icons/solid -o ../fonts -t ttf woff woff2 eot svg -g json -n "Iconoir Solid"
+reorient ./icons/regular/*.svg
+reorient ./icons/solid/*.svg
+
+fantasticon ./icons/regular -o ../fonts -t ttf woff woff2 eot svg -g json -n "Iconoir Regular"
+fantasticon ./icons/solid -o ../fonts -t ttf woff woff2 eot svg -g json -n "Iconoir Solid"
+
+rm -rf ./icons
